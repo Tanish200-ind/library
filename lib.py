@@ -48,7 +48,7 @@ def remove():
     for book in data:
         if book['title'].strip().lower()==a:
             data.remove(book)
-            save_json("library.json",data)
+            save_json("lib.json",data)
         break
     else:
         print('no such book in library')
@@ -65,7 +65,7 @@ def update():
         if book['title'].strip().lower()==s :
             if book['aval']=="available":
                 book['aval']="not available"
-                save_json("library.json",data)
+                save_json("lib.json",data)
             else:
                 book['aval']= "available"
         else:
